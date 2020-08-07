@@ -58,6 +58,17 @@ namespace Scriber.Language
                 parent.Children.AddLast(this);
             }
         }
+        
+        public Element(Element? parent, ElementType type)
+        {
+            Type = type;
+            Parent = parent;
+
+            if (parent != null)
+            {
+                parent.Children.AddLast(this);
+            }
+        }
 
         public void Detach()
         {

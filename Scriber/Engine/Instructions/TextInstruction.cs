@@ -15,7 +15,7 @@ namespace Scriber.Engine.Instructions
         public override object Execute(CompilerState state, Argument[] arguments)
         {
             // validate arguments, as text nodes cannot contain children.
-            if (arguments != null && arguments.Length > 0)
+            if (arguments != null && arguments.Length > 1)
             {
                 throw new InvalidOperationException("Text instructions do not accept arguments");
             }
